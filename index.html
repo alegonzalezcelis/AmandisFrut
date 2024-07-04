@@ -156,8 +156,9 @@
                 Los mejores cítricos de la Región
               </h3>
               <p class="md:text-lg text-neutral-600 mb-5">
-                En AmandisFrut nos dedicamos a la venta de cítricos al por
-                mayor, cosechados y procesados de manera natural.
+                En <span class="font-bold">AmandisFrut</span> nos dedicamos a la
+                venta de cítricos al por mayor, cosechados y procesados de
+                manera natural.
               </p>
               <ul class="text-neutral-600">
                 <li class="text-xl my-2">
@@ -223,13 +224,17 @@
         <!-- Si no logro cambiarle el w, agregar un color de fondo en el body -->
         <section
           id="servicios"
-          class="container mx-auto py-10 px-5 gap-4"
+          class="grid grid-cols-12 col-span-12 gap-y-16"
         >
-          <h2 class="text-4xl lg:text-5xl text-neutral-900">
+          <h2
+            class="col-span-10 col-start-2 text-4xl lg:text-5xl text-neutral-900 text-center"
+          >
             Nuestros servicios
           </h2>
           <!-- También puede decir Nuestro sello -->
-          <p class="md:text-lg text-justify w-full md:w-2/3 text-neutral-600">
+          <p
+            class="col-span-10 col-start-2 md:col-span-6 md:col-start-4 md:text-lg text-justify text-neutral-600"
+          >
             En AmandisFrut, nos comprometemos a proporcionar cítricos frescos y
             de la más alta calidad.
             <br />
@@ -238,37 +243,42 @@
             tu negocio, por eso nos aseguramos de que nuestros productos lleguen
             a tu cocina en perfectas condiciones.
           </p>
-          <div class="gap-10 m-0">
+          <!-- Contenedor de servicios -->
+          <div class="grid grid-cols-9 col-span-10 col-start-2 gap-10">
             <!-- Servicio 1 -->
             <div
-              class="bg-white w-full md:w-1/4 border gap-3 p-5 rounded-lg text-center"
+              class="col-span-9 md:col-span-3 p-10 bg-white border rounded-lg text-center flex flex-col gap-y-5"
             >
               <!-- icono -->
-              <i class="fa-solid fa-seedling text-5xl text-orange-500"></i>
+              <i class="fa-solid fa-seedling text-6xl text-orange-500"></i>
               <h3 class="text-2xl">Proceso natural</h3>
               <p class="text-neutral-600">
                 Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
                 diam justo sed vero dolor duo.
               </p>
             </div>
+
             <!-- Servicio 2 -->
             <div
-              class="bg-white w-full md:w-1/4 border gap-3 p-5 rounded-lg text-center"
+              class="col-span-9 md:col-span-3 p-10 bg-white border rounded-lg text-center flex flex-col gap-y-5"
             >
               <!-- icono -->
-              <i class="fa-solid fa-wallet text-5xl text-orange-500"></i>
+              <i
+                class="fa-solid fa-hand-holding-dollar text-6xl text-orange-500"
+              ></i>
               <h3 class="text-2xl">El mejor precio</h3>
               <p class="text-neutral-600">
                 Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
                 diam justo sed vero dolor duo.
               </p>
             </div>
-            <!-- Servicio 3 -->
+
+            <!-- Servicio 2 -->
             <div
-              class="bg-white w-full md:w-1/4 border gap-3 p-5 rounded-lg text-center"
+              class="col-span-9 md:col-span-3 p-10 bg-white border rounded-lg text-center flex flex-col gap-y-5"
             >
               <!-- icono -->
-              <i class="fa-solid fa-truck text-5xl text-orange-500"></i>
+              <i class="fa-solid fa-truck text-6xl text-orange-500"></i>
               <h3 class="text-2xl">Entrega rápida y confiable</h3>
               <p class="text-neutral-600">
                 Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
@@ -280,9 +290,109 @@
         <!-- Productos -->
         <section
           id="productos"
-          class="container mx-auto py-10 px-5 gap-4"
+          class="grid grid-cols-12 col-span-12 mt-10"
         >
-          <h2 class="text-4xl lg:text-5xl text-neutral-900">Productos</h2>
+          <h2
+            class="col-span-10 col-start-2 text-4xl lg:text-5xl text-neutral-900 text-center"
+          >
+            Productos
+          </h2>
+          <!-- Galería de imagenes -->
+          <div
+            class="grid grid-cols-2 col-span-10 col-start-2 mt-10 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8"
+          >
+            <!-- image - start -->
+            <a
+              href="#"
+              class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+            >
+              <img
+                src="assets/images/gallery-1.jpg"
+                loading="lazy"
+                alt="Photo by Minh Pham"
+                class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+              />
+
+              <div
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+              ></div>
+
+              <span
+                class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+                >VR</span
+              >
+            </a>
+            <!-- image - end -->
+
+            <!-- image - start -->
+            <a
+              href="#"
+              class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+            >
+              <img
+                src="assets/images/gallery-2.jpg"
+                loading="lazy"
+                alt="Photo by Magicle"
+                class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+              />
+
+              <div
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+              ></div>
+
+              <span
+                class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+                >Tech</span
+              >
+            </a>
+            <!-- image - end -->
+
+            <!-- image - start -->
+            <a
+              href="#"
+              class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+            >
+              <img
+                src="assets/images/gallery-3.jpg"
+                loading="lazy"
+                alt="Photo by Martin Sanchez"
+                class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+              />
+
+              <div
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+              ></div>
+
+              <span
+                class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+                >Dev</span
+              >
+            </a>
+            <!-- image - end -->
+
+            <!-- image - start -->
+            <a
+              href="#"
+              class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+            >
+              <img
+                src="assets/images/gallery-4.jpg"
+                loading="lazy"
+                alt="Photo by Lorenzo Herrera"
+                class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+              />
+
+              <div
+                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+              ></div>
+
+              <span
+                class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+                >Retro</span
+              >
+            </a>
+            <!-- image - end -->
+          </div>
         </section>
       </div>
     </div>
