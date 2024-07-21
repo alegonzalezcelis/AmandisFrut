@@ -37,383 +37,282 @@
     src="https://kit.fontawesome.com/f5bdbb41e0.js"
     crossorigin="anonymous"
   ></script>
-  <body class="bg-slate-100">
+  <body class="">
     <div class="container-fluid mx-auto">
       <!-- Disminuir el height del nav al momento de hacer scroll hacia abajo, y luego volverlo a la normalidad al hacer scroll hacia a arriba -->
 
       <!-- Agregar información arriba para utilizar espacio (Correo - Teléfono - Redes sociales) -->
       <nav
-        class="flex flex-wrap items-center justify-between w-full py-4 px-10 text-lg text-gray-700 bg-white sticky top-0 z-10"
+        class="grid grid-cols-12 fixed w-full top-0 z-10 bg-white shadow-xl"
+        id="cabecera"
       >
         <!-- Contenedor del logo -->
-        <div class="">
+        <div
+          class="col-span-12 md:col-start-3 md:col-span-4 mx-auto md:mx-0 mt-5"
+        >
           <a href="#">
             <img
-              class="w-20 md:w-28"
+              class="w-24 md:w-32"
               src="assets/images/logo-amandisfrut.png"
               alt=""
               srcset=""
             />
           </a>
         </div>
-
-        <!-- Menú Hamburguesa -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="menu-button"
-          class="h-6 w-6 cursor-pointer md:hidden block"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+        <button
+          class="hidden col-end-11 w-28 text-sm bg-green-500 rounded-md text-white h-12 md:flex items-center justify-center gap-x-5 my-auto"
+          onclick="window.open('https://wa.me/56966192139/?text=Hola, me gustaría comprar unos limoncitos...', '_blank')"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-
-        <!-- Menú items -->
-        <div
-          class="hidden w-full md:flex md:items-center md:w-auto"
-          id="menu"
-        >
-          <ul
-            class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
-          >
-            <li>
-              <a
-                class="md:p-4 py-2 block hover:text-purple-400"
-                href="#"
-                >Inicio</a
-              >
-            </li>
-            <li>
-              <a
-                class="md:p-4 py-2 block hover:text-purple-400"
-                href="#"
-                >Servicios</a
-              >
-            </li>
-            <li>
-              <a
-                class="md:p-4 py-2 block hover:text-purple-400"
-                href="#"
-                >Productos</a
-              >
-            </li>
-            <li>
-              <a
-                class="md:p-4 py-2 block hover:text-purple-400"
-                href="#"
-                >Nosotros</a
-              >
-            </li>
-            <li>
-              <a
-                class="md:p-4 py-2 block hover:text-purple-400 text-purple-500"
-                href="#"
-                >Contacto</a
-              >
-            </li>
-          </ul>
-        </div>
+          Contáctanos
+        </button>
       </nav>
       <!-- Contenedor de la Grilla -->
-      <div class="grid grid-cols-12 gap-4">
-        <!-- Header -->
-        <header
-          id="header-section"
-          class="col-span-12 text-white py-20 md:py-28"
+      <!-- Header -->
+      <header
+        id="header-section"
+        class="grid grid-cols-12 text-gray-500 py-10 md:py-10 mt-24 md:mt-36"
+      >
+        <!-- Inicio -->
+        <div
+          class="col-start-2 col-end-12 md:col-start-3 md:col-end-8 rounded-md"
         >
-          <!-- Inicio -->
-          <div class="grid grid-cols-12 text-center">
-            <h1
-              class="col-start-3 col-span-8 text-center text-2xl md:text-4xl xl:text-5xl mb-8 leading-10"
-            >
-              La mejor calidad de Cítricos con
-              <br />
-              <span
-                class="text-center font-extrabold text-4xl md:text-5xl xl:text-7xl"
-                >AmandisFrut</span
-              >
-            </h1>
-            <p class="col-start-3 col-span-8 md:text-2xl text-center">
-              Nos dedicamos a la venta de cítricos al por mayor, cosechados y
-              procesados de manera natural.
-            </p>
-            <br />
-            <button
-              class="col-start-3 col-span-8 md:col-start-6 md:col-span-2 bg-green-500 rounded-md text-white h-16 mt-5 mb-10 flex items-center justify-center gap-x-5"
-              onclick="window.open('https://wa.me/56966192139/?text=Hola, me gustaría comprar unos limoncitos...', '_blank')"
-            >
-              <i class="fa-brands fa-whatsapp text-4xl"></i>
-              Comprar
-            </button>
-          </div>
-        </header>
-        <!-- Fin Header -->
-
-        <!-- Main -->
-        <main class="container-fluid grid grid-cols-12 col-span-12 py-10 gap-4">
-          <div class="grid grid-cols-12 col-start-3 col-span-8 gap-10">
-            <div
-              class="grid col-span-10 grid-rows-2 grid-flow-col gap-4 md:col-span-3 md:flex md:flex-col md:items-start"
-            >
-              <i
-                class="fa-solid fa-lemon row-span-2 text-green-500 text-center my-auto text-4xl"
-              ></i>
-              <div class="row-span-2">
-                <h2 class="text-neutral-600 font-semibold">
-                  Frescura y calidad
-                </h2>
-                <p class="text-neutral-600 font-light text-sm">
-                  Productos cosechados y procesados de la mejor calidad
-                </p>
-              </div>
-            </div>
-            <div
-              class="grid col-span-10 grid-rows-2 grid-flow-col gap-4 md:col-span-3 md:flex md:flex-col md:items-start"
-            >
-              <i
-                class="fa-solid fa-store row-span-2 text-green-500 text-center my-auto text-4xl"
-              ></i>
-              <div class="row-span-2">
-                <h2 class="text-neutral-600 font-semibold">Amplia variedad</h2>
-                <p class="text-neutral-600 font-light text-sm">
-                  Ofrecemos una amplia variedad de cítricos y frutas procesadas
-                </p>
-              </div>
-            </div>
-            <div
-              class="grid col-span-10 grid-rows-2 grid-flow-col gap-4 md:col-span-3 md:flex md:flex-col md:items-start"
-            >
-              <i
-                class="fa-solid fa-hand-holding-dollar row-span-2 text-green-500 text-center my-auto text-4xl"
-              ></i>
-              <div class="row-span-2">
-                <h2 class="text-neutral-600 font-semibold">El mejor precio</h2>
-                <p class="text-neutral-600 font-light text-sm">
-                  Ofrecemos precios competitivos en todos nuestros productos.
-                </p>
-              </div>
-            </div>
-            <div
-              class="grid col-span-10 grid-rows-2 grid-flow-col gap-4 md:col-span-3 md:flex md:flex-col md:items-start"
-            >
-              <i
-                class="fa-solid fa-truck row-span-2 text-green-500 text-center my-auto text-4xl"
-              ></i>
-              <div class="row-span-2">
-                <h2 class="text-neutral-600 font-semibold">
-                  Entrega rápida y confiable
-                </h2>
-                <p class="text-neutral-600 font-light text-sm">
-                  Recibe tu pedido de manera rápida y segura.
-                </p>
-              </div>
-            </div>
-          </div>
-        </main>
-        <!-- Main -->
-
-        <!-- Servicios -->
-        <!-- Si no logro cambiarle el w, agregar un color de fondo en el body -->
-        <section
-          id="servicios"
-          class="grid grid-cols-12 col-span-12 gap-y-16"
-        >
-          <h2
-            class="col-span-10 col-start-2 text-4xl lg:text-5xl text-neutral-900 text-center"
+          <h1
+            class="text-center md:text-left text-2xl md:text-4xl xl:text-5xl mb-8 leading-10"
           >
-            Nuestros servicios
-          </h2>
-          <!-- También puede decir Nuestro sello -->
-          <p
-            class="col-span-10 col-start-2 md:col-span-6 md:col-start-4 md:text-lg text-justify text-neutral-600"
-          >
-            En AmandisFrut, nos comprometemos a proporcionar cítricos frescos y
-            de la más alta calidad.
+            La mejor calidad de Cítricos con
             <br />
-            <br />
-            Sabemos que la frescura y el sabor son esenciales para el éxito de
-            tu negocio, por eso nos aseguramos de que nuestros productos lleguen
-            a tu cocina en perfectas condiciones.
+            <span
+              class="text-center font-extrabold text-4xl md:text-5xl xl:text-7xl text-green-500"
+              >AmandisFrut</span
+            >
+          </h1>
+          <p class="md:text-2xl text-center md:text-left font-semib">
+            Nos dedicamos a la venta de cítricos al por mayor, cosechados y
+            procesados de manera natural.
           </p>
-          <!-- Contenedor de servicios -->
-          <div class="grid grid-cols-9 col-span-10 col-start-2 gap-10">
-            <!-- Servicio 1 -->
-            <div
-              class="col-span-9 md:col-span-3 p-10 bg-white border rounded-lg text-center flex flex-col gap-y-5"
-            >
-              <!-- icono -->
-              <i class="fa-solid fa-seedling text-6xl text-orange-500"></i>
-              <h3 class="text-2xl">100% Fresco</h3>
-              <p class="text-neutral-600">
-                Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
-                diam justo sed vero dolor duo.
-              </p>
-            </div>
-
-            <!-- Servicio 2 -->
-            <div
-              class="col-span-9 md:col-span-3 p-10 bg-white border rounded-lg text-center flex flex-col gap-y-5"
-            >
-              <!-- icono -->
-              <i
-                class="fa-solid fa-hand-holding-dollar text-6xl text-orange-500"
-              ></i>
-              <h3 class="text-2xl">El mejor precio</h3>
-              <p class="text-neutral-600">
-                Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
-                diam justo sed vero dolor duo.
-              </p>
-            </div>
-
-            <!-- Servicio 2 -->
-            <div
-              class="col-span-9 md:col-span-3 p-10 bg-white border rounded-lg text-center flex flex-col gap-y-5"
-            >
-              <!-- icono -->
-              <i class="fa-solid fa-truck text-6xl text-orange-500"></i>
-              <h3 class="text-2xl">Entrega rápida y confiable</h3>
-              <p class="text-neutral-600">
-                Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
-                diam justo sed vero dolor duo.
-              </p>
-            </div>
-          </div>
-        </section>
-        <!-- Productos -->
-        <section
-          id="productos"
-          class="grid grid-cols-12 col-span-12 mt-10"
+          <br />
+          <button
+            class="w-48 mx-auto md:mx-0 bg-green-500 rounded-md text-white h-16 mt-5 flex items-center justify-center gap-x-5"
+            onclick="window.open('https://wa.me/56966192139/?text=Hola, me gustaría comprar unos limoncitos...', '_blank')"
+          >
+            <i class="fa-brands fa-whatsapp text-4xl"></i>
+            Contáctanos
+          </button>
+        </div>
+        <div
+          id="bg-header"
+          class="hidden md:flex justify-end col-span-3"
         >
-          <h2
-            class="col-span-10 col-start-2 text-4xl lg:text-5xl text-neutral-900 text-center"
-          >
-            Productos
-          </h2>
-          <!-- Galería de imagenes -->
+          <img
+            src="/assets/images/header-bg.png"
+            alt=""
+          />
+        </div>
+      </header>
+      <!-- Fin Header -->
+
+      <!-- Main -->
+      <main class="container-fluid grid grid-cols-12 col-span-12 py-10 gap-4">
+        <div
+          class="grid grid-cols-12 col-start-2 col-end-12 md:col-start-3 md:col-end-11 gap-x-5 gap-y-10"
+        >
           <div
-            class="grid grid-cols-2 col-span-10 col-start-2 mt-10 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8"
+            class="grid col-span-12 grid-flow-col gap-x-5 md:col-span-3 md:flex md:flex-col md:items-start rounded-lg shadow-xl py-10 px-5"
           >
-            <!-- image - start -->
-            <a
-              href="#"
-              class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
-            >
-              <img
-                src="assets/images/gallery-1.jpg"
-                loading="lazy"
-                alt="Photo by Minh Pham"
-                class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-              />
-
-              <div
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
-              ></div>
-
-              <span
-                class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
-                >VR</span
-              >
-            </a>
-            <!-- image - end -->
-
-            <!-- image - start -->
-            <a
-              href="#"
-              class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
-            >
-              <img
-                src="assets/images/gallery-2.jpg"
-                loading="lazy"
-                alt="Photo by Magicle"
-                class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-              />
-
-              <div
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
-              ></div>
-
-              <span
-                class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
-                >Tech</span
-              >
-            </a>
-            <!-- image - end -->
-
-            <!-- image - start -->
-            <a
-              href="#"
-              class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
-            >
-              <img
-                src="assets/images/gallery-3.jpg"
-                loading="lazy"
-                alt="Photo by Martin Sanchez"
-                class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-              />
-
-              <div
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
-              ></div>
-
-              <span
-                class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
-                >Dev</span
-              >
-            </a>
-            <!-- image - end -->
-
-            <!-- image - start -->
-            <a
-              href="#"
-              class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
-            >
-              <img
-                src="assets/images/gallery-4.jpg"
-                loading="lazy"
-                alt="Photo by Lorenzo Herrera"
-                class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-              />
-
-              <div
-                class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
-              ></div>
-
-              <span
-                class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
-                >Retro</span
-              >
-            </a>
-            <!-- image - end -->
+            <i
+              class="fa-solid fa-lemon text-green-500 mx-auto my-auto text-4xl"
+            ></i>
+            <div class="md:mt-3 md:text-center">
+              <h2 class="text-neutral-600 font-semibold mb-3">
+                Frescura y calidad
+              </h2>
+              <p class="text-neutral-600 font-light text-sm">
+                Productos cosechados y procesados de la mejor calidad
+              </p>
+            </div>
           </div>
-        </section>
-      </div>
+          <div
+            class="grid col-span-12 grid-flow-col gap-x-5 md:col-span-3 md:flex md:flex-col md:items-start rounded-lg shadow-xl py-10 px-5"
+          >
+            <i
+              class="fa-solid fa-store text-green-500 mx-auto my-auto text-4xl"
+            ></i>
+            <div class="md:mt-3 md:text-center">
+              <h2 class="text-neutral-600 font-semibold mb-3">
+                Amplia variedad
+              </h2>
+              <p class="text-neutral-600 font-light text-sm">
+                Ofrecemos una amplia variedad de cítricos y frutas procesadas
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid col-span-12 grid-flow-col gap-x-5 md:col-span-3 md:flex md:flex-col md:items-start rounded-lg shadow-xl py-10 px-5"
+          >
+            <i
+              class="fa-solid fa-hand-holding-dollar text-green-500 mx-auto my-auto text-4xl"
+            ></i>
+            <div class="md:mt-3 md:text-center">
+              <h2 class="text-neutral-600 font-semibold mb-3">
+                El mejor precio
+              </h2>
+              <p class="text-neutral-600 font-light text-sm">
+                Ofrecemos precios competitivos en todos nuestros productos.
+              </p>
+            </div>
+          </div>
+          <div
+            class="grid col-span-12 grid-flow-col gap-x-5 md:col-span-3 md:flex md:flex-col md:items-start rounded-lg shadow-xl py-10 px-5"
+          >
+            <i
+              class="fa-solid fa-truck text-green-500 mx-auto my-auto text-4xl"
+            ></i>
+            <div class="md:mt-3 md:text-center">
+              <h2 class="text-neutral-600 font-semibold mb-3">
+                Entrega rápida y confiable
+              </h2>
+              <p class="text-neutral-600 font-light text-sm">
+                Recibe tu pedido de manera rápida y segura.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Main -->
+
+      <!-- Servicios -->
+      <!-- Si no logro cambiarle el w, agregar un color de fondo en el body -->
+      <section
+        id="servicios"
+        class="grid grid-cols-12 col-span-12 gap-y-16"
+      >
+        <h2
+          class="col-span-10 col-start-2 text-4xl lg:text-5xl text-neutral-900 text-center"
+        >
+          Nuestros servicios
+        </h2>
+        <!-- También puede decir Nuestro sello -->
+        <p
+          class="col-span-10 col-start-2 md:col-span-6 md:col-start-4 md:text-lg text-justify text-neutral-600"
+        >
+          En AmandisFrut, nos comprometemos a proporcionar cítricos frescos y de
+          la más alta calidad.
+          <br />
+          <br />
+          Sabemos que la frescura y el sabor son esenciales para el éxito de tu
+          negocio, por eso nos aseguramos de que nuestros productos lleguen a tu
+          cocina en perfectas condiciones.
+        </p>
+      </section>
+      <!-- Productos -->
+      <section
+        id="productos"
+        class="grid grid-cols-12 col-span-12 mt-10"
+      >
+        <h2
+          class="col-span-10 col-start-2 text-4xl lg:text-5xl text-neutral-900 text-center"
+        >
+          Productos
+        </h2>
+        <!-- Galería de imagenes -->
+        <div
+          class="grid grid-cols-2 col-span-10 col-start-2 mt-10 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8"
+        >
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+          >
+            <img
+              src="assets/images/gallery-1.jpg"
+              loading="lazy"
+              alt="Photo by Minh Pham"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >VR</span
+            >
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+          >
+            <img
+              src="assets/images/gallery-2.jpg"
+              loading="lazy"
+              alt="Photo by Magicle"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Tech</span
+            >
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80"
+          >
+            <img
+              src="assets/images/gallery-3.jpg"
+              loading="lazy"
+              alt="Photo by Martin Sanchez"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Dev</span
+            >
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a
+            href="#"
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80"
+          >
+            <img
+              src="assets/images/gallery-4.jpg"
+              loading="lazy"
+              alt="Photo by Lorenzo Herrera"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+            />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"
+            ></div>
+
+            <span
+              class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg"
+              >Retro</span
+            >
+          </a>
+          <!-- image - end -->
+        </div>
+      </section>
     </div>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.5/dist/alpine.js"></script>
-    <script>
-      // Menú Hamburguesa
-      const button = document.querySelector("#menu-button");
-      const menu = document.querySelector("#menu");
-
-      button.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-
-      // Script para scroll suave
-      // document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      //   anchor.addEventListener("click", function (e) {
-      //     e.preventDefault();
-
-      //     document.querySelector(this.getAttribute("href")).scrollIntoView({
-      //       behavior: "smooth",
-      //     });
-      //   });
-      // });
-    </script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

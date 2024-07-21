@@ -23,24 +23,17 @@ img, video, svg { height: auto; max-width: 100%; }
 
 /* Custom */
 
-#header-section {
-    background: url(../images/blur-header.jpg);
-    background: url(../images/header.jpeg);
-    background-repeat: none;
-    background-size: cover;
-    h1 {
-        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
-    }
-    
-    h2 {
-        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
-    }
+#bg-header img{
+    width: 400px;
 }
 
 #logo-amandisfrut {
     width: 200px;
 }
 
+.hide-menu {
+    display: none; /* O cualquier otro estilo para ocultar el menú */
+  }
 /* Responsive */
 
 
