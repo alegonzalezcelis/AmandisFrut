@@ -22,11 +22,6 @@ img, video, svg { height: auto; max-width: 100%; }
 }
 
 /* Custom */
-
-#bg-header img{
-    width: 400px;
-}
-
 #logo-amandisfrut {
     width: 200px;
 }
