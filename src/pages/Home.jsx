@@ -122,11 +122,11 @@ const Home = () => {
             necesidades.
             <br />
             <br />
-            <span className="font-bold">Valor: </span>: Nos esforzamos por
+            <span className="font-bold">Valor: </span> Nos esforzamos por
             ofrecer los mejores precios sin comprometer la calidad.
             <br />
             <br />
-            <span className="font-bold">Servicio excepcional: </span>: Nos
+            <span className="font-bold">Servicio excepcional: </span> Nos
             comprometemos a proporcionar una experiencia de compra y entrega
             impecable y confiable.
           </p>
