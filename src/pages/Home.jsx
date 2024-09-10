@@ -1,18 +1,28 @@
+import nuestraMision from "../assets/images/nuestra-mision.jpg";
+
 import Hero from "../components/Hero";
 import InfoBoxes from "../components/InfoBox";
 import Title from "../components/Title";
 import ProductCard from "../components/ProductCard";
-import nuestraMision from "../assets/images/nuestra-mision.jpg";
+import CallToAction from "../components/CallToAction";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
     <>
-      <Hero />
+      <section id="inicio">
+        <Hero />
+      </section>
+
       <main className="container-fluid grid grid-cols-12 col-span-12 gap-4 mt-10">
         <Title title="¿Por qué AmandisFrut?" />
         <InfoBoxes />
       </main>
-      <section className="grid grid-cols-12 items-center py-5 my-5 border-y border-slate-200">
+      <section
+        id="productos"
+        className="grid grid-cols-12 items-center py-5 my-5 border-y border-slate-200"
+      >
         <Title title="Nuestros productos" />
         <p className="col-span-10 col-start-2 max-w-3xl mx-auto mt-4 text-muted-foreground md:text-lg text-center text-neutral-600">
           AmandisFrut ofrece cítricos y frutas premium de la más alta calidad.
@@ -79,8 +89,8 @@ const Home = () => {
       </section>
 
       <section
-        id="nosotros"
-        className="grid grid-cols-12 col-span-12 gap-y-10 mt-10"
+        id="mision"
+        className="grid grid-cols-12 col-span-12 gap-y-10 my-10"
       >
         <Title title="Nuestra Mision" />
         <div className="col-start-2 col-span-10 md:col-end-6">
@@ -137,34 +147,18 @@ const Home = () => {
             </li>
           </ul>
         </div>
-
-        {/* 
-
-**Calidad suprema**: Controlamos todo el proceso desde la siembra hasta la entrega para garantizar la máxima frescura y calidad.
-
-2. **Variedad**: Ofrecemos una amplia gama de cítricos y frutas para satisfacer todos los gustos y necesidades.
-
-3. **Valor**: Nos esforzamos por ofrecer los mejores precios sin comprometer la calidad.
-
-4. **Servicio excepcional**: Nos comprometemos a proporcionar una experiencia de compra y entrega impecable y confiable.
-
-5. **Sostenibilidad**: Implementamos prácticas agrícolas responsables para cuidar nuestro entorno y asegurar la calidad a largo plazo de nuestros productos.
-
-
-*/}
       </section>
-
+      {/* Call to action */}
+      <CallToAction />
+      <Title title="Contáctanos" />
       <section
-        id="productos"
-        className="grid grid-cols-12 col-span-12 mt-10"
+        id="contacto"
+        className=" py-12 px-4 sm:px-6 lg:px-8"
       >
-        <div className="col-start-2 col-end-12 mt-10 gap-4 shadow-xl">
-          <div
-            className="elfsight-app-91716e24-2f05-42d3-9fb0-605276e9e2ca"
-            data-elfsight-app-lazy
-          ></div>
-        </div>
+        <Contact />
       </section>
+
+      <Footer />
     </>
   );
 };

@@ -1,15 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/images/logo-amandisfrut.png";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Inicio", href: "#" },
-    { name: "Productos", href: "#products" },
-    { name: "Nuestra mision", href: "#about" },
-    { name: "Testimonios", href: "#testimonials" },
+    { name: "Inicio", href: "#inicio" },
+    { name: "Productos", href: "#productos" },
+    { name: "Nuestra misión", href: "#mision" },
+    { name: "Contacto", href: "#contacto" },
   ];
+
+  useEffect(() => {
+    const smoothScroll = (e) => {
+      e.preventDefault();
+      const targetId = e.currentTarget.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+      if (isMenuOpen) setIsMenuOpen(false);
+    };
+
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach((link) => {
+      link.addEventListener("click", smoothScroll);
+    });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", smoothScroll);
+      });
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -28,7 +54,7 @@ const Nav = () => {
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
             <a
-              href="#"
+              href="#inicio"
               className="flex-shrink-0"
             >
               <img
