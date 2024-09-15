@@ -3,7 +3,7 @@ import nuestraMision from "../assets/images/nuestra-mision.jpg";
 import Hero from "../components/Hero";
 import InfoBoxes from "../components/InfoBox";
 import Title from "../components/Title";
-import ProductCard from "../components/ProductCard";
+import ProductGallery from "../components/ProductGallery";
 import CallToAction from "../components/CallToAction";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
@@ -11,89 +11,69 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
-      <section id="inicio">
+      <section
+        id="inicio"
+        data-aos="fade-down"
+      >
         <Hero />
       </section>
 
-      <main className="container-fluid grid grid-cols-12 col-span-12 gap-4 mt-10">
-        <Title title="¿Por qué AmandisFrut?" />
+      <main
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        className="container-fluid grid grid-cols-12 col-span-12 gap-4 mt-5"
+      >
+        <Title
+          title="¿Qué nos hace diferente?"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        />
         <InfoBoxes />
       </main>
       <section
+        data-aos="fade-right"
+        data-aos-duration="1000"
         id="productos"
-        className="grid grid-cols-12 items-center py-5 my-5 border-y border-slate-200"
+        className="grid grid-cols-12 items-center py-5 my-10"
       >
-        <Title title="Nuestros productos" />
-        <p className="col-span-10 col-start-2 max-w-3xl mx-auto mt-4 text-muted-foreground md:text-lg text-center text-neutral-600">
+        <Title
+          title="Nuestros productos"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        />
+        <p
+          data-aos="fade-right"
+          data-aos-delay="400"
+          className="col-span-10 col-start-2 max-w-3xl mx-auto mt-4 text-muted-foreground md:text-lg text-center text-neutral-600"
+        >
           AmandisFrut ofrece cítricos y frutas premium de la más alta calidad.
           <br />
           Descubre nuestra variedad de productos frescos y saborea lo mejor de
           la naturaleza.
         </p>
         <div className="grid grid-cols-12 col-start-2 col-span-10 gap-5 mt-10">
-          <ProductCard
-            name={"Limones"}
-            description={
-              "Cítricos versátiles con sabor intenso y refrescante. Ideales para cocina, bebidas y usos medicinales. Cultivados de forma natural para máxima calidad."
-            }
-            imageUrl={
-              "https://images.unsplash.com/photo-1692954685426-e1eea03babcd?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-          />
-          <ProductCard
-            name={"Naranjas"}
-            description={
-              "Jugosas y dulces, repletas de vitamina C. Perfectas para zumos frescos o como snack saludable. Cosechadas en su punto óptimo de maduración."
-            }
-            imageUrl={
-              "https://images.unsplash.com/photo-1661882002589-d93b357a2ffc?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-          />
-          <ProductCard
-            name={"Paltas"}
-            description={
-              "Cremosas y nutritivas, ricas en grasas saludables. Excelentes para ensaladas, guacamole o tostadas. Cosechadas a mano en su punto perfecto."
-            }
-            imageUrl={
-              "https://veritable.cl/wp-content/uploads/2023/05/palta.jpeg"
-            }
-          />
-          <ProductCard
-            name={"Miel"}
-            description={
-              "Pura y natural, con sabor suave y aromático. Producida por abejas en nuestros propios campos de cítricos. Perfecta como endulzante o para usos terapéuticos."
-            }
-            imageUrl={
-              "https://images.unsplash.com/photo-1613548058193-1cd24c1bebcf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-          />
-          <ProductCard
-            name={"Pomelos"}
-            description={
-              "Jugosos con un equilibrio perfecto entre dulce y ácido. Ricos en antioxidantes y vitaminas. Ideales para dietas y para refrescar en días calurosos."
-            }
-            imageUrl={
-              "https://www.cuerpomente.com/medio/2023/01/25/pomelo_973f4dbe.jpg"
-            }
-          />
-          <ProductCard
-            name={"Manzanas"}
-            description={
-              "Crujientes y jugosas, con un equilibrio perfecto entre dulce y ácido. Ricas en fibra y antioxidantes. Ideales como snack saludable o en diversas preparaciones culinarias."
-            }
-            imageUrl={
-              "https://images.unsplash.com/photo-1533893662125-43c54ffa3b41?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-          />
+          <div className="col-span-12">
+            <ProductGallery />
+          </div>
         </div>
       </section>
 
       <section
         id="mision"
+        data-aos="fade-right"
+        data-aos-duration="1200"
         className="grid grid-cols-12 col-span-12 gap-y-10 my-10"
       >
-        <Title title="Nuestra Mision" />
-        <div className="col-start-2 col-span-10 md:col-end-6">
+        <Title
+          title="Nuestra Mision"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        />
+        <div
+          className="col-start-2 col-span-10 md:col-end-6"
+          data-aos="fade-right"
+          data-aos-delay="400"
+        >
           <img
             src={nuestraMision}
             className="rounded-md h-auto shadow-xl"
@@ -101,7 +81,11 @@ const Home = () => {
             srcSet=""
           />
         </div>
-        <div className="col-start-2 col-span-10 md:col-end-12 md:col-span-4 font-light">
+        <div
+          className="col-start-2 col-span-10 md:col-end-12 md:col-span-4 font-light"
+          data-aos="fade-left"
+          data-aos-delay="600"
+        >
           <p className="text-justify text-neutral-600">
             En AmandisFrut, nos comprometemos a proporcionar cítricos frescos y
             de la más alta calidad.
@@ -133,15 +117,27 @@ const Home = () => {
 
           <br />
           <ul className="list-none font-medium text-base">
-            <li className="text-justify text-neutral-600 flex items-center mb-3">
+            <li
+              className="text-justify text-neutral-600 flex items-center mb-3"
+              data-aos="fade-left"
+              data-aos-delay="700"
+            >
               <i className="fa-regular fa-circle-check text-green-500 mr-5 text-2xl"></i>
               Ventas por bins
             </li>
-            <li className="text-justify text-neutral-600 flex items-center mb-3">
+            <li
+              className="text-justify text-neutral-600 flex items-center mb-3"
+              data-aos="fade-left"
+              data-aos-delay="800"
+            >
               <i className="fa-regular fa-circle-check text-green-500 mr-5 text-2xl"></i>
               Ventas por caja
             </li>
-            <li className="text-justify text-neutral-600 flex items-center mb-3">
+            <li
+              className="text-justify text-neutral-600 flex items-center mb-3"
+              data-aos="fade-left"
+              data-aos-delay="900"
+            >
               <i className="fa-regular fa-circle-check text-green-500 mr-5 text-2xl"></i>
               Ventas al detalle
             </li>
@@ -149,16 +145,28 @@ const Home = () => {
         </div>
       </section>
       {/* Call to action */}
-      <CallToAction />
-      <Title title="Contáctanos" />
+      <CallToAction
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      />
+      <Title
+        title="Contáctanos"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      />
       <section
         id="contacto"
-        className=" py-12 px-4 sm:px-6 lg:px-8"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="py-12 px-4 sm:px-6 lg:px-8"
       >
         <Contact />
       </section>
 
-      <Footer />
+      <Footer
+        data-aos="fade-up"
+        data-aos-duration="800"
+      />
     </>
   );
 };
