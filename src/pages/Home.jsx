@@ -5,6 +5,7 @@ import InfoBoxes from "../components/InfoBox";
 import Title from "../components/Title";
 import ProductGallery from "../components/ProductGallery";
 import CallToAction from "../components/CallToAction";
+import Faq from "../components/Faq";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -149,17 +150,31 @@ const Home = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
       />
-      <Title
-        title="Contáctanos"
+      <section
+        id="faq"
         data-aos="fade-up"
-        data-aos-delay="200"
-      />
+        data-aos-duration="1000"
+        className="py-12 px-4 sm:px-6 lg:px-8"
+      >
+        <Title
+          title="Preguntas frecuentes"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        />
+        <Faq />
+      </section>
+
       <section
         id="contacto"
         data-aos="fade-up"
         data-aos-duration="1000"
         className="py-12 px-4 sm:px-6 lg:px-8"
       >
+        <Title
+          title="Contáctanos"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        />
         <Contact />
       </section>
 
