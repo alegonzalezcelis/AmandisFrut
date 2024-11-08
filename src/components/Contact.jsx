@@ -131,6 +131,15 @@ const Contact = () => {
                 </button>
               </div>
             </form>
+            {/* Formulario de Google */}
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSepLtmG8BMLMevFb2UYf1mGT7_mhH377-44uGilYQmIvi5EqQ/viewform?embedded=true"
+              width="640"
+              height="645"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
           </div>
         </div>
         <div className="mt-8">

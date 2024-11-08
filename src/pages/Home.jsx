@@ -3,7 +3,6 @@ import nuestraMision from "../assets/images/nuestra-mision.jpg";
 import Hero from "../components/Hero";
 import InfoBoxes from "../components/InfoBox";
 import Title from "../components/Title";
-import ProductGallery from "../components/ProductGallery";
 import CallToAction from "../components/CallToAction";
 import Faq from "../components/Faq";
 import Contact from "../components/Contact";
@@ -53,9 +52,7 @@ const Home = () => {
           la naturaleza.
         </p>
         <div className="grid grid-cols-12 col-start-2 col-span-10 gap-5 mt-10">
-          <div className="col-span-12">
-            <ProductGallery />
-          </div>
+          <div className="col-span-12">{/* Galería de productos */}</div>
         </div>
       </section>
 
