@@ -7,6 +7,7 @@ import CallToAction from "../components/CallToAction";
 import Faq from "../components/Faq";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Gallery from "../components/Gallery";
 
 const Home = () => {
   return (
@@ -52,7 +53,10 @@ const Home = () => {
           la naturaleza.
         </p>
         <div className="grid grid-cols-12 col-start-2 col-span-10 gap-5 mt-10">
-          <div className="col-span-12">{/* Galería de productos */}</div>
+          <div className="col-span-12">
+            {/* Galería de productos */}
+            <Gallery />
+          </div>
         </div>
       </section>
 
