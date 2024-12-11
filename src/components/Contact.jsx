@@ -2,15 +2,48 @@ import { useState } from "react";
 import GoogleMap from "./GoogleMap";
 
 const Contact = () => {
+  // Estado para los campos
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
+  // Estado para errores
+  const [errors, setErrors] = useState({});
+
+  // Estado para controlar cuando se está enviando el formulario
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  //Estado para mostrar mensaje de éxito
+  const [submitSucces, setSubmitSuccess] = useState(false);
+
+  const validateEmail = (email) => {
+    const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    return regex.test(email);
+  };
+
+  // Función que valida cada campo
+  const validateField = (fieldName, value) => {
+    if (!value.trim()) {
+      return "Este campo es obligatorio";
+    }
+    if (fieldName === "email" && !validateEmail(value)) {
+      return "El correo electrónico no es válido";
+    }
+    return "";
+  };
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(e.target);
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // Validar el campo mientras el usuario escribe
+    const error = validateField(name, value);
+    setErrors((prev) => ({
+      ...prev,
+      [name]: error,
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -85,9 +118,13 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                  className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 ${
+                    errors.name ? "border-red-500" : ""
+                  }`}
                 />
+                {errors.name && (
+                  <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                )}
               </div>
               <div>
                 <label
@@ -102,9 +139,13 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
+                  className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 ${
+                    errors.email ? "border-red-500" : ""
+                  }`}
                 />
+                {errors.email && (
+                  <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                )}
               </div>
               <div>
                 <label
@@ -119,9 +160,13 @@ const Contact = () => {
                   rows="4"
                   value={formData.message}
                   onChange={handleChange}
-                  required
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"
-                ></textarea>
+                  className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 ${
+                    errors.message ? "border-red-500" : ""
+                  }`}
+                />
+                {errors.message && (
+                  <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                )}
               </div>
               <div>
                 <button
