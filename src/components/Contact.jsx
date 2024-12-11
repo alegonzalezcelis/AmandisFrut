@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import GoogleMap from "./GoogleMap";
 
 const Contact = () => {
@@ -10,13 +10,14 @@ const Contact = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    console.log(e.target);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Aquí puedes agregar la lógica para enviar el formulario
-    console.log(formData);
-    alert("Formulario enviado");
+    // console.log(formData);
+    // console.log("Formulario enviado");
   };
 
   return (
@@ -131,15 +132,6 @@ const Contact = () => {
                 </button>
               </div>
             </form>
-            {/* Formulario de Google */}
-            {/* <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSepLtmG8BMLMevFb2UYf1mGT7_mhH377-44uGilYQmIvi5EqQ/viewform?embedded=true"
-              width="640"
-              height="645"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-            ></iframe> */}
           </div>
         </div>
         <div className="mt-8">
